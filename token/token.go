@@ -4,11 +4,6 @@ package token
 
 type TokenType string
 
-type Token struct {
-	Type    TokenType
-	Literal string
-}
-
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
@@ -31,6 +26,11 @@ const (
 	RBRACE = "}"
 
 	// Keywords
-	FUNCTION = "function"
-	LET      = "let"
+	FUNCTION = "FUNCTION"
+	LET      = "LET"
 )
+
+type Token struct {
+	Type    TokenType
+	Literal string
+}
